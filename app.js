@@ -1,5 +1,7 @@
 
 require('express-async-errors');
+const dotenv = require('dotenv')
+const mongoose = require('mongoose')
 const express = require('express');
 const app = express();
 
@@ -14,6 +16,9 @@ app.use(express.json());
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
+
+
+
 
 
 
@@ -44,3 +49,4 @@ const connect = async() =>{
 }
 
 connect()
+
